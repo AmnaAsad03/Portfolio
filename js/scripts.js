@@ -4,6 +4,20 @@
  * Projects Section: Interactive 3D Orbital Carousel
  */
 
+const pageLoader = document.getElementById("pageLoader");
+const hidePageLoader = () => {
+    if (!pageLoader) return;
+
+    pageLoader.classList.add("is-hidden");
+    pageLoader.setAttribute("aria-hidden", "true");
+};
+
+window.addEventListener("load", hidePageLoader, { once: true });
+
+if (document.readyState === "complete") {
+    hidePageLoader();
+}
+
 window.addEventListener("DOMContentLoaded", () => {
     /* =====================================================
        EXISTING BOOTSTRAP NAVIGATION
@@ -313,7 +327,10 @@ window.addEventListener("DOMContentLoaded", () => {
         activeIndex = index;
         previousFocusedElement = document.activeElement;
 
+        modalImage.dataset.projectId = project.id;
         modalImage.onerror = () => {
+            if (modalImage.dataset.projectId !== project.id) return;
+
             console.error(
                 "Could not load project dashboard image:",
                 project.dashboard
@@ -324,7 +341,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 "Check the image path and filename.";
         };
 
-        modalImage.src = project.dashboard;
         modalImage.alt = `${project.title} dashboard screenshot`;
 
         modalCategory.textContent = project.category;
@@ -356,6 +372,8 @@ window.addEventListener("DOMContentLoaded", () => {
             modalResultWrap.hidden = true;
             modalResult.textContent = "";
         }
+
+        modalImage.src = project.dashboard;
 
         projectModal.inert = false;
         projectModal.setAttribute("aria-hidden", "false");

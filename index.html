@@ -23,6 +23,18 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <div class="page-loader" id="pageLoader" role="status" aria-label="Loading page">
+            <div class="dot-spinner" aria-hidden="true">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div>
+        </div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -693,7 +705,7 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="contact-email">Your email</label>
-                    <input class="form-control" id="contact-email" name="_replyto" type="email" maxlength="254" autocomplete="email" required>
+                    <input class="form-control" id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="contact-message">Message</label>
@@ -709,68 +721,68 @@
 
             <!-- Email -->
             <div class="col-md-6 col-lg-3">
-                <div class="card py-4 h-100">
+                <a class="card contact-card-link py-4 h-100"
+                   href="mailto:amna.asad003pk@gmail.com">
                     <div class="card-body text-center">
                         <i class="fas fa-envelope text-primary mb-3 fa-2x"></i>
                         <h4 class="text-uppercase m-0">Email</h4>
                         <hr class="my-4 mx-auto" />
-                        <a class="contact-link"
-                           href="mailto:amna.asad003pk@gmail.com">
+                        <span class="contact-link">
                             amna.asad003pk@gmail.com
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- LinkedIn -->
             <div class="col-md-6 col-lg-3">
-                <div class="card py-4 h-100">
+                <a class="card contact-card-link py-4 h-100"
+                   href="https://www.linkedin.com/in/amna-asad-ab0011373/"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     <div class="card-body text-center">
                         <i class="fab fa-linkedin text-primary mb-3 fa-2x"></i>
                         <h4 class="text-uppercase m-0">LinkedIn</h4>
                         <hr class="my-4 mx-auto" />
-                        <a class="contact-link"
-                           href="https://www.linkedin.com/in/amna-asad-ab0011373/"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                        <span class="contact-link">
                             Amna Asad
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- GitHub -->
             <div class="col-md-6 col-lg-3">
-                <div class="card py-4 h-100">
+                <a class="card contact-card-link py-4 h-100"
+                   href="https://github.com/AmnaAsad03"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     <div class="card-body text-center">
                         <i class="fab fa-github text-primary mb-3 fa-2x"></i>
                         <h4 class="text-uppercase m-0">GitHub</h4>
                         <hr class="my-4 mx-auto" />
-                        <a class="contact-link"
-                           href="https://github.com/AmnaAsad03"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                        <span class="contact-link">
                             AmnaAsad03
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Google Scholar -->
             <div class="col-md-6 col-lg-3">
-                <div class="card py-4 h-100">
+                <a class="card contact-card-link py-4 h-100"
+                   href="https://scholar.google.com/citations?user=YGdXfXUAAAAJ&hl=en"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     <div class="card-body text-center">
                         <i class="fas fa-graduation-cap text-primary mb-3 fa-2x"></i>
                         <h4 class="text-uppercase m-0">Google Scholar</h4>
                         <hr class="my-4 mx-auto" />
-                        <a class="contact-link"
-                           href="https://scholar.google.com/citations?user=YGdXfXUAAAAJ&hl=en"
-                           target="_blank"
-                           rel="noopener noreferrer">
+                        <span class="contact-link">
                             Amna Asad
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
 
         </div>
